@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java -->
+<html><link type="text/css" id="dark-mode" rel="stylesheet" href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java"><style type="text/css" id="dark-mode-custom-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" type="application/rss+xml" title="JavaRanch: sending automatic javamail from a website using java mail API" href="https://coderanch.com/forums/rss/topicPosts/632631">
+<meta name="description" content="[quote]Below is my code for sending an automatic mail on registration from my website: [/quote] [code=java] import java.util.Properties; import javax.">
+<meta name="keywords" content="abstract,application,authenticator,build-path,catalina,catch,chain,class,clip,common">
+<title>sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)</title>
+<style type="text/css">@import url(https://www.coderanch.com/templates/default/betaview/styles/reset.css?1558432543855 );</style>
+<style type="text/css">@import url(https://www.coderanch.com/templates/default/betaview/styles/style.css?1558432543855 );</style>
+<!--[if lt IE 9]>
+<script src="https://www.coderanch.com/templates/default/betaview/scripts/IE/html5shiv.js"></script>
+<style type="text/css">@import url(https://www.coderanch.com/templates/default/betaview/styles/ie-version-less-than-9.css?1558432543855);</style>
+<![endif]-->
+<link href="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://coderanch.com/mobile/t/632631/java/sending-automatic-javamail-website-java">
+<link rel="search" type="application/opensearchdescription+xml" href="https://coderanch.com/forum-search.xml" title="JavaRanch forums">
+<script type="text/javascript" async="" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/ga.js"></script><script src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/jquery.min.js"></script>
+<link rel="stylesheet" href="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/jquery-ui.css">
+<script src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/jquery-ui.min.js"></script>
+<script> var JS_CONTEXT_PATH = ""; var JS_CSRF_TOKEN = "LMDL-ZIF4-PNAM-I6QY-GWKA-367D-H0X3-H0BT"; </script>
+<script src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/guest.js"></script>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body class="container borderBoxed " cz-shortcut-listen="true">
+<header>
+<div class="tmenu fixed">
+<ul>
+<li>
+<a id="faq" href="https://coderanch.com/f/153/Wiki">FAQs</a>
+</li><li>
+<a href="https://coderanch.com/forums/search/filters/1">Search</a>
+</li><li>
+<a href="https://coderanch.com/forums/recentTopics/list">Recent&nbsp;Topics</a>
+</li><li>
+<a href="https://coderanch.com/forums/posts/flagged">Flagged&nbsp;Topics</a>
+</li><li>
+<a href="https://coderanch.com/forums/hottestTopics/list">Hot&nbsp;Topics</a>
+</li><li>
+<a href="https://coderanch.com/forums/bestTopics/list">Best Topics</a>
+</li><li class="lastItem">
+<a id="loginLink" href="https://coderanch.com/forums/user/login" data-login-path="/t/632631/java/sending-automatic-javamail-website-java">Register / Login</a>
+</li></ul>
+</div>
+<div class="mooseandads">
+<div class="clear headerWrpr">
+<span class="moose fl">
+<img class="site-header-logo" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/moosefly.gif" onerror="if (this.src!=&#39;https://www.coderanch.com/mooseImages/moosefly.gif&#39;) {this.src = &#39;https://www.coderanch.com/mooseImages/moosefly.gif&#39;}" alt="Logo" title="">
+</span>
+<div class="forum-top-banner fl">
+<div class="bnwrpr">
+<table class="multbntab">
+<tbody><tr>
+<td class="bi">
+<a href="https://coderanch.com/forums/banner/redirect/558" target="_blank">
+<img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/md-pie.png" border="0" alt="Meaningless Drivel is fun!" width="728" height="90"></a>
+</td>
+<td class="str">
+<a style="text-decoration:none" href="https://coderanch.com/forums/banner/list" title="Click on this asterisk to learn more about advertising like this on CodeRanch!"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/20x20_orange_asterisk.gif"></a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="siteInfoMessage announcementSeparator fl">
+Win a copy of <a href="https://www.amazon.com/Grokking-Bitcoin-Kalle-Rosenbaum/dp/1617294640/?tag=crfa12-20">Grokking Bitcoin</a> this week in the <a href="https://coderanch.com/f/157/Cloud-Virtualization">Cloud/Virtualization</a> forum!
+</div>
+<div class="clear"></div>
+</header>
+<div class="middle fl ">
+<script>var TOPIC_ID = 632631;</script>
+<script src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/userLocalTime.js"></script>
+<style type="text/css">@import url(https://www.coderanch.com/templates/default/betaview/styles/topic-show.css?1558432543855 );</style>
+<style type="text/css">@import url(https://www.coderanch.com/templates/default/betaview/syntaxhighlighter/styles/desktop.css?1558432543855 );</style>
+<div class="topicActionPanel fl" xmlns="http://www.w3.org/1999/html">
+<div class="homeLinks fl">
+<ul>
+</ul>
+</div> <div class="topicActionButtons fl">
+<ul>
+<li>
+<span class="opaque topActBtn fl-button" title="You must log in or register to be able to reply">Post Reply</span>
+<span class="opaque topActBtn fl-button" title="You must login or register to be able to bookmark this topic">Bookmark Topic</span>
+<span class="opaque topActBtn fl-button" title="You must login or register to be notified when this topic is updated">Watch Topic</span>
+</li><li>
+<span class="opaque topActBtn fr-button" title="You must log in or register to be able to create a new topic">New Topic</span>
+</li></ul>
+<div class="clear"></div>
+</div>
+</div>
+<div class="topicRightArea">
+<style> .forumActionButtons { margin-left: 17% } #homeSearch { margin-left: 19% } </style>
+<div id="categorySidebar" class="leftPanel fl ">
+<div>
+<!--just make the default button slightly larger. -->
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/forums" title="forums home">programming forums</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/java" title="Java">Java</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/mobile" title="Mobile">Mobile</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/certification" title="Certification">Certification</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/databases" title="Databases">Databases</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/caching" title="Caching">Caching</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/books" title="Books">Books</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/engineering" title="Engineering">Engineering</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/micro-controllers" title="Micro Controllers">Micro Controllers</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/os" title="OS">OS</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/languages" title="Languages">Languages</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/paradigms" title="Paradigms">Paradigms</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/ide" title="IDEs">IDEs</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/build-tools" title="Build Tools">Build Tools</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/frameworks" title="Frameworks">Frameworks</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/application-servers" title="Application Servers">Application Servers</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/open-source" title="Open Source">Open Source</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/4" title="This Site">This Site</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/careers" title="Careers">Careers</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/c/6" title="Other">Other</a>
+<a class="catLstBtn catLstBtn-l4 pointer" href="https://coderanch.com/forums/forums/allForums" title="list of all forums">all forums</a>
+<div class="leftEdgeStaff">
+<div class="descr">this forum made possible by our volunteer staff, including ...</div>
+<div class="rankName">Marshals:</div>
+<ul>
+<li><span class="stf">Campbell Ritchie</span>
+</li><li><span class="stf">Liutauras Vilda</span>
+</li><li><span class="stf">Bear Bibeault</span>
+</li><li><span class="stf">Tim Cooke</span>
+</li><li><span class="stf">Junilu Lacar</span>
+</li></ul>
+<div class="rankName">Sheriffs:</div>
+<ul>
+<li><span class="stf">Paul Clapham</span>
+</li><li><span class="stf">Devaka Cooray</span>
+</li><li><span class="stf">Knute Snortum</span>
+</li></ul>
+<div class="rankName">Saloon Keepers:</div>
+<ul>
+<li><span class="stf">Ron McLeod</span>
+</li><li><span class="stf">Tim Moores</span>
+</li><li><span class="stf">Stephan van Hulst</span>
+</li><li><span class="stf">Tim Holloway</span>
+</li><li><span class="stf">Frits Walraven</span>
+</li></ul>
+<div class="rankName">Bartenders:</div>
+<ul>
+<li><span class="stf">Carey Brown</span>
+</li><li><span class="stf">salvin francis</span>
+</li><li><span class="stf">Claude Moore</span>
+</li></ul>
+</div>
+</div>
+</div> <div id="rightPanel" class="rightPanel fl">
+<div class="content ">
+<div class="topicForums">
+<label title="This thread resides in one forum">Forum:</label>
+<ul>
+<li class="finalItem">
+<a href="https://coderanch.com/f/1/java" title="Java in General forum">Java in General</a>
+</li></ul>
+</div> <div class="topicSubject">
+<h1 class="fl">
+<span id="topicFlags" class="flag"></span>
+<span id="topicSubject">sending automatic javamail from a website using java mail API</span>
+&nbsp;<a href="https://coderanch.com/forums/rss/topicPosts/632631"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/rss.png" border="0" alt="RSS feed" title="RSS feed"></a>
+</h1>
+<div class="clear"></div>
+</div>
+<div class="section topicBodyAndFooter"><div class="contentBackground1 postItem " data-pid="2897220">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<a href="https://coderanch.com/u/289050/sunaina-agarwal" title="You must login or register" class="">sunaina agarwal</a>
+</div>
+<div class="status userRankStatus">
+Ranch Hand
+</div>
+<div class="posts">Posts: 49</div>
+<div class="cowPieSec">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 00:56:39" id="2897220">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897220" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give sunaina pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText "><blockquote class="uncited">
+			<p>Below is my code for sending an automatic mail on registration from my website:
+<br> </p>
+		</blockquote>
+<br> 
+<br> <div><div id="highlighter_654093" class="syntaxhighlighter  java"><div class="toolbar"><span><a href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div><div class="line number53 index52 alt2">53</div><div class="line number54 index53 alt1">54</div><div class="line number55 index54 alt2">55</div><div class="line number56 index55 alt1">56</div><div class="line number57 index56 alt2">57</div><div class="line number58 index57 alt1">58</div><div class="line number59 index58 alt2">59</div><div class="line number60 index59 alt1">60</div><div class="line number61 index60 alt2">61</div><div class="line number62 index61 alt1">62</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">import</code> <code class="java plain">java.util.Properties;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="java keyword">import</code> <code class="java plain">javax.mail.Message;</code></div><div class="line number4 index3 alt1"><code class="java keyword">import</code> <code class="java plain">javax.mail.MessagingException;</code></div><div class="line number5 index4 alt2"><code class="java keyword">import</code> <code class="java plain">javax.mail.PasswordAuthentication;</code></div><div class="line number6 index5 alt1"><code class="java keyword">import</code> <code class="java plain">javax.mail.Session;</code></div><div class="line number7 index6 alt2"><code class="java keyword">import</code> <code class="java plain">javax.mail.Transport;</code></div><div class="line number8 index7 alt1"><code class="java keyword">import</code> <code class="java plain">javax.mail.internet.InternetAddress;</code></div><div class="line number9 index8 alt2"><code class="java keyword">import</code> <code class="java plain">javax.mail.internet.MimeMessage;</code></div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">ConfirmationMail {</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String[] args) {</code></div><div class="line number14 index13 alt1">&nbsp;</div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">int</code> <code class="java plain">id=</code><code class="java value">0</code><code class="java plain">;</code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">String passWord=</code><code class="java keyword">null</code><code class="java plain">;</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">sendMail(id, passWord);</code></div><div class="line number18 index17 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number19 index18 alt2">&nbsp;</div><div class="line number20 index19 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">sendMail(</code><code class="java keyword">int</code> <code class="java plain">id, String passWord) {</code></div><div class="line number21 index20 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// TODO Auto-generated method stub</code></div><div class="line number22 index21 alt1">&nbsp;</div><div class="line number23 index22 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">final</code> <code class="java plain">String username = </code><code class="java string">"xxx@gmail.com"</code><code class="java plain">;</code></div><div class="line number24 index23 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">final</code> <code class="java plain">String password = </code><code class="java string">"xxx"</code><code class="java plain">;</code></div><div class="line number25 index24 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">final</code> <code class="java plain">String host= </code><code class="java string">"smtp.gmail.com"</code><code class="java plain">;</code></div><div class="line number26 index25 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">final</code> <code class="java keyword">int</code> <code class="java plain">port=</code><code class="java value">587</code><code class="java plain">;</code></div><div class="line number27 index26 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Properties props = </code><code class="java keyword">new</code> <code class="java plain">Properties();</code></div><div class="line number28 index27 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">props.put(</code><code class="java string">"mail.smtp.auth"</code><code class="java plain">, </code><code class="java string">"true"</code><code class="java plain">);</code></div><div class="line number29 index28 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">props.put(</code><code class="java string">"mail.smtp.ssl.enable"</code><code class="java plain">, </code><code class="java string">"true"</code><code class="java plain">);</code></div><div class="line number30 index29 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">props.put(</code><code class="java string">"mail.smtp.host"</code><code class="java plain">, </code><code class="java string">"smtp.gmail.com"</code><code class="java plain">);</code></div><div class="line number31 index30 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">props.put(</code><code class="java string">"mail.smtp.port"</code><code class="java plain">, </code><code class="java string">"587"</code><code class="java plain">);</code></div><div class="line number32 index31 alt1">&nbsp;</div><div class="line number33 index32 alt2">&nbsp;</div><div class="line number34 index33 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Session session = Session.getInstance(props,</code></div><div class="line number35 index34 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">javax.mail.Authenticator() {</code></div><div class="line number36 index35 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">protected</code> <code class="java plain">PasswordAuthentication getPasswordAuthentication() {</code></div><div class="line number37 index36 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">return</code> <code class="java keyword">new</code> <code class="java plain">PasswordAuthentication(username, password);</code></div><div class="line number38 index37 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number39 index38 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">});</code></div><div class="line number40 index39 alt1">&nbsp;</div><div class="line number41 index40 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">try</code> <code class="java plain">{</code></div><div class="line number42 index41 alt1">&nbsp;</div><div class="line number43 index42 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Message message = </code><code class="java keyword">new</code> <code class="java plain">MimeMessage(session);</code></div><div class="line number44 index43 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">message.setFrom(</code><code class="java keyword">new</code> <code class="java plain">InternetAddress(</code><code class="java string">"xxx@gmail.com"</code><code class="java plain">));</code></div><div class="line number45 index44 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">message.setRecipients(Message.RecipientType.TO,</code></div><div class="line number46 index45 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">InternetAddress.parse(</code><code class="java string">"xxxx@gmail.com"</code><code class="java plain">));</code></div><div class="line number47 index46 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">message.setSubject(</code><code class="java string">"Testing Subject"</code><code class="java plain">);</code></div><div class="line number48 index47 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">message.setText(</code><code class="java string">"Dear Mail Crawler,"</code></div><div class="line number49 index48 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">+ </code><code class="java string">"\n\n No spam to my email, please!"</code><code class="java plain">);</code></div><div class="line number50 index49 alt1">&nbsp;</div><div class="line number51 index50 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Transport transport = session.getTransport(</code><code class="java string">"smtps"</code><code class="java plain">);</code></div><div class="line number52 index51 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">transport.connect (host, port,username,password);</code></div><div class="line number53 index52 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">transport.sendMessage(message, message.getAllRecipients());</code></div><div class="line number54 index53 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">transport.close();&nbsp; </code></div><div class="line number55 index54 alt2">&nbsp;</div><div class="line number56 index55 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Message sent successfully"</code><code class="java plain">);</code></div><div class="line number57 index56 alt2">&nbsp;</div><div class="line number58 index57 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">} </code><code class="java keyword">catch</code> <code class="java plain">(MessagingException e) {</code></div><div class="line number59 index58 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">throw</code> <code class="java keyword">new</code> <code class="java plain">RuntimeException(e);</code></div><div class="line number60 index59 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number61 index60 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number62 index61 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+<br> 
+<br> <blockquote class="uncited">
+			<p>And when i run this on my eclipse its throwing exception the stack trace is as below:    </p>
+		</blockquote>
+<br> 
+<br> 
+<br> <div><div id="highlighter_49721" class="syntaxhighlighter  java"><div class="toolbar"><span><a href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">java.lang.RuntimeException: javax.mail.MessagingException: Could not connect to SMTP host: smtp.gmail.com, port: </code><code class="java value">587</code><code class="java plain">;</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">nested exception is:</code></div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.DTO.ConfirmationMail.sendMail(ConfirmationMail.java:</code><code class="java value">64</code><code class="java plain">)</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.servlet.AffiliateApproveServlet.doGet(AffiliateApproveServlet.java:</code><code class="java value">39</code><code class="java plain">)</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.servlet.http.HttpServlet.service(HttpServlet.java:</code><code class="java value">621</code><code class="java plain">)</code></div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.servlet.http.HttpServlet.service(HttpServlet.java:</code><code class="java value">728</code><code class="java plain">)</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:</code><code class="java value">305</code><code class="java plain">)</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:</code><code class="java value">210</code><code class="java plain">)</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:</code><code class="java value">51</code><code class="java plain">)</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:</code><code class="java value">243</code><code class="java plain">)</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:</code><code class="java value">210</code><code class="java plain">)</code></div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:</code><code class="java value">222</code><code class="java plain">)</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:</code><code class="java value">123</code><code class="java plain">)</code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:</code><code class="java value">502</code><code class="java plain">)</code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:</code><code class="java value">171</code><code class="java plain">)</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:</code><code class="java value">100</code><code class="java plain">)</code></div><div class="line number18 index17 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:</code><code class="java value">953</code><code class="java plain">)</code></div><div class="line number19 index18 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:</code><code class="java value">118</code><code class="java plain">)</code></div><div class="line number20 index19 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:</code><code class="java value">408</code><code class="java plain">)</code></div><div class="line number21 index20 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:</code><code class="java value">1041</code><code class="java plain">)</code></div><div class="line number22 index21 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:</code><code class="java value">603</code><code class="java plain">)</code></div><div class="line number23 index22 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:</code><code class="java value">312</code><code class="java plain">)</code></div><div class="line number24 index23 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:</code><code class="java value">1145</code><code class="java plain">)</code></div><div class="line number25 index24 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:</code><code class="java value">615</code><code class="java plain">)</code></div><div class="line number26 index25 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.lang.Thread.run(Thread.java:</code><code class="java value">724</code><code class="java plain">)</code></div><div class="line number27 index26 alt2"><code class="java plain">Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.gmail.com, port: </code><code class="java value">587</code><code class="java plain">;</code></div><div class="line number28 index27 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">nested exception is:</code></div><div class="line number29 index28 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?</code></div><div class="line number30 index29 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:</code><code class="java value">1986</code><code class="java plain">)</code></div><div class="line number31 index30 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:</code><code class="java value">656</code><code class="java plain">)</code></div><div class="line number32 index31 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Service.connect(Service.java:</code><code class="java value">345</code><code class="java plain">)</code></div><div class="line number33 index32 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.DTO.ConfirmationMail.sendMail(ConfirmationMail.java:</code><code class="java value">55</code><code class="java plain">)</code></div><div class="line number34 index33 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">22</code> <code class="java plain">more</code></div><div class="line number35 index34 alt2"><code class="java plain">Caused by: javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?</code></div><div class="line number36 index35 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.InputRecord.handleUnknownRecord(InputRecord.java:</code><code class="java value">671</code><code class="java plain">)</code></div><div class="line number37 index36 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.InputRecord.read(InputRecord.java:</code><code class="java value">504</code><code class="java plain">)</code></div><div class="line number38 index37 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:</code><code class="java value">927</code><code class="java plain">)</code></div><div class="line number39 index38 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:</code><code class="java value">1312</code><code class="java plain">)</code></div><div class="line number40 index39 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:</code><code class="java value">1339</code><code class="java plain">)</code></div><div class="line number41 index40 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:</code><code class="java value">1323</code><code class="java plain">)</code></div><div class="line number42 index41 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.util.SocketFetcher.configureSSLSocket(SocketFetcher.java:</code><code class="java value">532</code><code class="java plain">)</code></div><div class="line number43 index42 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:</code><code class="java value">337</code><code class="java plain">)</code></div><div class="line number44 index43 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:</code><code class="java value">229</code><code class="java plain">)</code></div><div class="line number45 index44 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:</code><code class="java value">1950</code><code class="java plain">)</code></div><div class="line number46 index45 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">25</code> <code class="java plain">more</code></div></div></td></tr></tbody></table></div></div>
+<br> 
+<br> 
+<br> <blockquote class="uncited">
+			<p>And the jar files i have in my eclipse build path are javax.mail.jar , activation.jar, commons-email-1.0.jar Please help me resolve this... Thanks in advance...</p>
+		</blockquote></div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground2 postItem " data-pid="2897226">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<a href="https://coderanch.com/u/231803/Martin-Vajsar" title="You must login or register" class="">Martin Vajsar</a>
+</div>
+<div class="status userRankStatus">
+Sheriff
+<span class="staffStar" title="This user is a Coderanch staff member"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/staff-star.png"></span>
+</div>
+<div class="posts">Posts: 3752</div>
+<div class="cowPieSec">
+<div class="cowDisplayForUser" title="This user has earned a total of 62 cow(s)">
+<span class="numCowsImageText">62</span>
+<span class="numCowsImage"><b class="sprite1 cowIcon"></b></span>
+</div>
+</div>
+<div class="icon">
+<a class="nonForumLink" href="https://coderanch.com/t/660301/Wiki/Bumper-Stickers" target="_blank">I like...</a>
+</div>
+<div class="stickers-section">
+<a href="http://www.coderanch.com/how-to/java/BumperStickers" target="_blank"><img class="bumper-sticker s" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/16_chrome.png" alt="Chrome" title="Chrome" border="0"></a>
+<img class="bumper-sticker s" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/16_netbeans.gif" alt="Netbeans IDE" title="Netbeans IDE" border="0">
+<img class="bumper-sticker s" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/16_oracle.gif" alt="Oracle" title="Oracle" border="0">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:08:25" id="2897226">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897226" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give Martin pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">Nothing <a href="http://www.coderanch.com/forums/f-3/jdbc" class="api" title="the JavaRanch JDBC forum" target="_new">JDBC</a> related here, moving to a better forum...</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground1 postItem " data-pid="2897227">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<span class="" title="You must login or register">sunaina agarwal</span>
+</div>
+<div class="status userRankStatus">
+Ranch Hand
+</div>
+<div class="posts">Posts: 49</div>
+<div class="cowPieSec">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:13:31" id="2897227">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897227" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give sunaina pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">sorry by mistake i posted it here .... How to move it to another forum... Should i have to close this and post a new question in the another forum or is there any other way to do it??</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground2 postItem " data-pid="2897228">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<a href="https://coderanch.com/u/95280/Ulf-Dittmer" title="You must login or register" class="">Ulf Dittmer</a>
+</div>
+<div class="status userRankStatus">
+Rancher
+</div>
+<div class="posts">Posts: 42974</div>
+<div class="cowPieSec">
+<div class="cowDisplayForUser" title="This user has earned a total of 76 cow(s)">
+<span class="numCowsImageText">76</span>
+<span class="numCowsImage"><b class="sprite1 cowIcon"></b></span>
+</div>
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:14:52" id="2897228">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897228" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give Ulf pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">No, it's OK, Martin moved it already.
+<br> 
+<br> 587 is the Gmail TLS port, not the SSL port (which would be 465). You need to set some properties accordingly: <a class="snap_shots" href="http://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/" target="_blank">http://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/</a></div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground1 postItem " data-pid="2897232">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<span class="" title="You must login or register">sunaina agarwal</span>
+</div>
+<div class="status userRankStatus">
+Ranch Hand
+</div>
+<div class="posts">Posts: 49</div>
+<div class="cowPieSec">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:18:40" id="2897232">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897232" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give sunaina pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">@UlfDittmer hey i used the code from MK yong only but it was giving me some exception like "must issue STARTTLS command first" then i added a new jar file javaxmail.jar of version1.5. then it worked and now its giving me the exception as in the above question... Am banging my head on this issue from last three days please help me resolve this..</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground2 postItem " data-pid="2897233">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<span class="" title="You must login or register">Ulf Dittmer</span>
+</div>
+<div class="status userRankStatus">
+Rancher
+</div>
+<div class="posts">Posts: 42974</div>
+<div class="cowPieSec">
+<div class="cowDisplayForUser" title="This user has earned a total of 76 cow(s)">
+<span class="numCowsImageText">76</span>
+<span class="numCowsImage"><b class="sprite1 cowIcon"></b></span>
+</div>
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:24:31" id="2897233">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897233" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give Ulf pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">As I said, the properties you're using enable SSL, not TLS, so your code differs from the code in the article.</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground1 postItem " data-pid="2897234">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<span class="" title="You must login or register">sunaina agarwal</span>
+</div>
+<div class="status userRankStatus">
+Ranch Hand
+</div>
+<div class="posts">Posts: 49</div>
+<div class="cowPieSec">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 01:28:06" id="2897234">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897234" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give sunaina pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">k i tried the same code as in the article so its giving me this exception now:
+<br> 
+<br> <div><div id="highlighter_848522" class="syntaxhighlighter  java"><div class="toolbar"><span><a href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div><div class="line number53 index52 alt2">53</div><div class="line number54 index53 alt1">54</div><div class="line number55 index54 alt2">55</div><div class="line number56 index55 alt1">56</div><div class="line number57 index56 alt2">57</div><div class="line number58 index57 alt1">58</div><div class="line number59 index58 alt2">59</div><div class="line number60 index59 alt1">60</div><div class="line number61 index60 alt2">61</div><div class="line number62 index61 alt1">62</div><div class="line number63 index62 alt2">63</div><div class="line number64 index63 alt1">64</div><div class="line number65 index64 alt2">65</div><div class="line number66 index65 alt1">66</div><div class="line number67 index66 alt2">67</div><div class="line number68 index67 alt1">68</div><div class="line number69 index68 alt2">69</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">java.lang.RuntimeException: javax.mail.MessagingException: Could not convert socket to TLS;</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">nested exception is:</code></div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.DTO.ConfirmationMail.sendMail(ConfirmationMail.java:</code><code class="java value">56</code><code class="java plain">)</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.servlet.AffiliateApproveServlet.doGet(AffiliateApproveServlet.java:</code><code class="java value">39</code><code class="java plain">)</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.servlet.http.HttpServlet.service(HttpServlet.java:</code><code class="java value">621</code><code class="java plain">)</code></div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.servlet.http.HttpServlet.service(HttpServlet.java:</code><code class="java value">728</code><code class="java plain">)</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:</code><code class="java value">305</code><code class="java plain">)</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:</code><code class="java value">210</code><code class="java plain">)</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:</code><code class="java value">51</code><code class="java plain">)</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:</code><code class="java value">243</code><code class="java plain">)</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:</code><code class="java value">210</code><code class="java plain">)</code></div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:</code><code class="java value">222</code><code class="java plain">)</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:</code><code class="java value">123</code><code class="java plain">)</code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:</code><code class="java value">502</code><code class="java plain">)</code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:</code><code class="java value">171</code><code class="java plain">)</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:</code><code class="java value">100</code><code class="java plain">)</code></div><div class="line number18 index17 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:</code><code class="java value">953</code><code class="java plain">)</code></div><div class="line number19 index18 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:</code><code class="java value">118</code><code class="java plain">)</code></div><div class="line number20 index19 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:</code><code class="java value">408</code><code class="java plain">)</code></div><div class="line number21 index20 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:</code><code class="java value">1041</code><code class="java plain">)</code></div><div class="line number22 index21 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:</code><code class="java value">603</code><code class="java plain">)</code></div><div class="line number23 index22 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:</code><code class="java value">312</code><code class="java plain">)</code></div><div class="line number24 index23 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:</code><code class="java value">1145</code><code class="java plain">)</code></div><div class="line number25 index24 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:</code><code class="java value">615</code><code class="java plain">)</code></div><div class="line number26 index25 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.lang.Thread.run(Thread.java:</code><code class="java value">724</code><code class="java plain">)</code></div><div class="line number27 index26 alt2"><code class="java plain">Caused by: javax.mail.MessagingException: Could not convert socket to TLS;</code></div><div class="line number28 index27 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">nested exception is:</code></div><div class="line number29 index28 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></div><div class="line number30 index29 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.startTLS(SMTPTransport.java:</code><code class="java value">1930</code><code class="java plain">)</code></div><div class="line number31 index30 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:</code><code class="java value">668</code><code class="java plain">)</code></div><div class="line number32 index31 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Service.connect(Service.java:</code><code class="java value">367</code><code class="java plain">)</code></div><div class="line number33 index32 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Service.connect(Service.java:</code><code class="java value">226</code><code class="java plain">)</code></div><div class="line number34 index33 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Service.connect(Service.java:</code><code class="java value">175</code><code class="java plain">)</code></div><div class="line number35 index34 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Transport.send0(Transport.java:</code><code class="java value">253</code><code class="java plain">)</code></div><div class="line number36 index35 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at javax.mail.Transport.send(Transport.java:</code><code class="java value">124</code><code class="java plain">)</code></div><div class="line number37 index36 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.affiliate.DTO.ConfirmationMail.sendMail(ConfirmationMail.java:</code><code class="java value">51</code><code class="java plain">)</code></div><div class="line number38 index37 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">22</code> <code class="java plain">more</code></div><div class="line number39 index38 alt2"><code class="java plain">Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></div><div class="line number40 index39 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.Alerts.getSSLException(Alerts.java:</code><code class="java value">192</code><code class="java plain">)</code></div><div class="line number41 index40 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:</code><code class="java value">1884</code><code class="java plain">)</code></div><div class="line number42 index41 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:</code><code class="java value">276</code><code class="java plain">)</code></div><div class="line number43 index42 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:</code><code class="java value">270</code><code class="java plain">)</code></div><div class="line number44 index43 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:</code><code class="java value">1341</code><code class="java plain">)</code></div><div class="line number45 index44 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:</code><code class="java value">153</code><code class="java plain">)</code></div><div class="line number46 index45 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.Handshaker.processLoop(Handshaker.java:</code><code class="java value">868</code><code class="java plain">)</code></div><div class="line number47 index46 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.Handshaker.process_record(Handshaker.java:</code><code class="java value">804</code><code class="java plain">)</code></div><div class="line number48 index47 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:</code><code class="java value">1016</code><code class="java plain">)</code></div><div class="line number49 index48 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:</code><code class="java value">1312</code><code class="java plain">)</code></div><div class="line number50 index49 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:</code><code class="java value">1339</code><code class="java plain">)</code></div><div class="line number51 index50 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:</code><code class="java value">1323</code><code class="java plain">)</code></div><div class="line number52 index51 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.util.SocketFetcher.configureSSLSocket(SocketFetcher.java:</code><code class="java value">532</code><code class="java plain">)</code></div><div class="line number53 index52 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.util.SocketFetcher.startTLS(SocketFetcher.java:</code><code class="java value">469</code><code class="java plain">)</code></div><div class="line number54 index53 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at com.sun.mail.smtp.SMTPTransport.startTLS(SMTPTransport.java:</code><code class="java value">1925</code><code class="java plain">)</code></div><div class="line number55 index54 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">29</code> <code class="java plain">more</code></div><div class="line number56 index55 alt1"><code class="java plain">Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></div><div class="line number57 index56 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:</code><code class="java value">385</code><code class="java plain">)</code></div><div class="line number58 index57 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:</code><code class="java value">292</code><code class="java plain">)</code></div><div class="line number59 index58 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.validator.Validator.validate(Validator.java:</code><code class="java value">260</code><code class="java plain">)</code></div><div class="line number60 index59 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:</code><code class="java value">326</code><code class="java plain">)</code></div><div class="line number61 index60 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:</code><code class="java value">231</code><code class="java plain">)</code></div><div class="line number62 index61 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:</code><code class="java value">126</code><code class="java plain">)</code></div><div class="line number63 index62 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:</code><code class="java value">1323</code><code class="java plain">)</code></div><div class="line number64 index63 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">39</code> <code class="java plain">more</code></div><div class="line number65 index64 alt2"><code class="java plain">Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code></div><div class="line number66 index65 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:</code><code class="java value">196</code><code class="java plain">)</code></div><div class="line number67 index66 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:</code><code class="java value">268</code><code class="java plain">)</code></div><div class="line number68 index67 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:</code><code class="java value">380</code><code class="java plain">)</code></div><div class="line number69 index68 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">... </code><code class="java value">45</code> <code class="java plain">more</code></div></div></td></tr></tbody></table></div></div>
+<br> 
+<br> 
+<br> Sorry i had to post the  whole stack trace because its giving me this exception every time  i run it .</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div><div class="contentBackground2 postItem " data-pid="2897251">
+<div class="lcontent fl ">
+<div class="wp1">&nbsp;</div>
+<div class="wp2">
+<div class="name">
+<span class="" title="You must login or register">sunaina agarwal</span>
+</div>
+<div class="status userRankStatus">
+Ranch Hand
+</div>
+<div class="posts">Posts: 49</div>
+<div class="cowPieSec">
+</div>
+</div>
+</div>
+<div class="rcontent fr">
+<div class="rcwrapper ">
+<span class="postdate">
+<span title="Apr 23, 2014 02:49:41" id="2897251">posted 5 years ago</span>
+</span>
+<span class="postButtonsToolbar">
+<ul class="fr">
+<li>
+<img id="likeImage_2897251" class="opaque pointer" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/plus-1-thumb.gif" alt="Mark post as helpful" title="You must log in or register to be able to give a thumbs up for this post">
+</li><li>
+<span class="post-pie-section">
+<span class="pieoffer">
+<img class="piesender opaque" alt="send pies" title="You must log in to give sunaina pie on this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/give-pie-button.png" width="42px" height="18px">
+</span>
+</span>
+</li><li>
+<span class="opaque"><img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/quote_button.gif" alt="Quote" title="You must log in or register to be able to quote this post" class="pointer"></span>
+</li><li>
+<img class="pointer opaque" alt="Report post to moderator" title="You must login or register to report this post" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/report_post.png">
+</li></ul>
+<div class="clear"></div>
+</span>
+<div class="clear"></div><div class="postText ">i resolved this by adding just one line of code:
+<br> 
+<br> <div><div id="highlighter_242536" class="syntaxhighlighter  java"><div class="toolbar"><span><a href="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">props.put(</code><code class="java string">"mail.smtp.ssl.trust"</code><code class="java plain">, </code><code class="java string">"smtp.gmail.com"</code><code class="java plain">);</code></div></div></td></tr></tbody></table></div></div>
+<br> 
+<br> It worked like miracle... thank you all.....</div><div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>                
+            </div>
+<div class="fcontent-wrpr">
+<div class="fcontent">
+<div class="clearcld">
+<img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/bunkhouse_smoke.gif" class="bunkhouse-smoke">
+<div>&nbsp;</div>
+</div>
+<div class="ad topicEndAd">
+<div class="bnwrpr">
+<table class="multbntab">
+<tbody><tr>
+<td class="bi">
+<div class="sline">Never trust an airline that limits their passengers to one carry on iguana. Put this tiny ad in your shoe:</div>
+<div class="dx5descr">Create Edit Print &amp; Convert PDF Using Free API with Java</div>
+<a href="https://coderanch.com/forums/banner/redirect/859/444" target="_blank" class="dx5">https://coderanch.com/wiki/703735/Create-Convert-PDF-Free-Spire</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="flag-action-area">
+</div>
+</div>
+<div class="topicActionPanel">
+<div class="topicForumActionArea fl">
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<ul>
+<li><span class="opaque topActBtn fl-button" title="You must log in or register to be able to reply">Post Reply</span>
+<span class="opaque topActBtn fl-button" title="You must login or register to be able to bookmark this topic">Bookmark Topic</span>
+<span class="opaque topActBtn fl-button" title="You must login or register to be notified when this topic is updated">Watch Topic</span>
+</li><li> <span class="opaque topActBtn fr-button" title="You must log in or register to be able to create a new topic">New Topic</span>
+</li></ul>
+<div class="clear"></div>
+</div>
+<div class="threadBottomLinksArea">
+<div class="clear"></div>
+<div class="threadBoostButtonArea">
+<span class="styled-button" style="cursor: default;" title="You have to be logged in for the feature to become available">Boost this thread!</span>
+</div>
+</div>
+<div>
+<div class="similar-topics">
+<div class="wrpr">
+<h1>Similar Threads</h1>
+<ul>
+<li class="similar-topics-entry contentBackground1">
+<div class="left item-section st-thumb sim">
+</div>
+<div class="left item-section subjectItemSec">
+<a href="https://coderanch.com/t/382528/java/Javamail" class="subject">
+Javamail Example Problem
+</a>
+</div>
+</li><li class="similar-topics-entry contentBackground2">
+<div class="left item-section st-thumb sim">
+</div>
+<div class="left item-section subjectItemSec">
+<a href="https://coderanch.com/t/538026/java/Unrecognized-SSL-message-plain-text" class="subject">
+Unrecognized SSL message, plain text connection
+</a>
+</div>
+</li><li class="similar-topics-entry contentBackground1">
+<div class="left item-section st-thumb sim">
+</div>
+<div class="left item-section subjectItemSec">
+<a href="https://coderanch.com/t/382529/java/Javamail" class="subject">
+Javamail Example Problem
+</a>
+</div>
+</li><li class="similar-topics-entry contentBackground2">
+<div class="left item-section st-thumb sim">
+</div>
+<div class="left item-section subjectItemSec">
+<a href="https://coderanch.com/t/615904/java/send-mail-java" class="subject">
+How to send mail using java
+</a>
+</div>
+</li><li class="similar-topics-entry contentBackground1">
+<div class="left item-section st-thumb sim">
+</div>
+<div class="left item-section subjectItemSec">
+<a href="https://coderanch.com/t/443237/java/JavaMail-security" class="subject">
+JavaMail and security
+</a>
+</div>
+</li><li class="moreSimThreads"><a href="https://coderanch.com/forums/similars/similarTo/632631/sending-automatic-javamail-website-java">More...</a>
+</li></ul>
+<div class="footer"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/shAll.js"></script>
+<script type="text/javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</div>
+<footer>
+<div class="footer-banners">
+<div class="forum-top-banner fl">
+<div class="bnwrpr">
+<table class="multbntab">
+<tbody><tr>
+<td class="bi">
+<a href="https://coderanch.com/forums/banner/redirect/429" target="_blank">
+<img src="./sending automatic javamail from a website using java mail API [Solved] (Java in General forum at Coderanch)_files/ninja-banner-ad-coderanch.png" border="0" alt="It&#39;s not a secret anymore!" style="max-width: 1024px;"></a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="timezone">
+<script>
+document.write("current ranch time (not your local time) is " + ("May 21, 2019 19:36:29".bold()));
+</script>current ranch time (not your local time) is <b>May 21, 2019 19:36:29</b>
+<noscript>all times are in ranch time: GMT-6 in summer, GMT-7 in winter</noscript>
+</div>
+<div class="copyright">
+<a href="https://coderanch.com/t/660243/Wiki/Contact">contact us</a> | <a href="https://coderanch.com/advertising/">advertise</a> |
+<form method="post" action="https://coderanch.com/t/632631/java/sending-automatic-javamail-website-java">
+<input type="hidden" name="OWASP_CSRFTOKEN" value="LMDL-ZIF4-PNAM-I6QY-GWKA-367D-H0X3-H0BT">
+<input type="hidden" name="nonMobile" value="false">
+<input type="submit" value="mobile view">
+</form>
+| Powered by JForum | copyright © 1998-2019 <a href="https://javaranch.com/paul-wheaton.jsp">paul wheaton</a>
+</div>
+<div id="actionMessageBar" class="hiddenDisplay"></div>
+</footer>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2371260-2']);
+_gaq.push(['_gat._anonymizeIp']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</body></html>
